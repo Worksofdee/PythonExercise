@@ -1,0 +1,26 @@
+# This import registers the 3D projection, but is otherwise unused.
+
+from mpl_toolkits.mplot3d import Axes3D  
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+#input values
+x, y, z = np.random.rand(3,50)
+x1, y1, z1 = np.random.rand(3,50)
+x2, y2, z2 = np.random.rand(3,50)
+
+#different colors for each combination
+ax.scatter(x,y,z,c='darkgrey')
+ax.scatter(x1,y1,z1,c='red')
+ax.scatter(x2,y2,z2,c='yellow')
+
+#axis labels
+ax.set_xlabel('X Label')
+ax.set_ylabel('Y Label')
+ax.set_zlabel('Z Label')
+
+plt.show()
